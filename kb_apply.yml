@@ -1,0 +1,18 @@
+---
+- hosts:
+   - OCI
+  gather_facts: Yes
+  # become: yes
+  # become_user: root
+  # become_method: su
+  vars:
+    service_prefix: aeon
+  var_files:
+    - inventories/{{ stage }}/group_vars/main.yml
+    - inventories/{{ stage }}/host_vars/main,yml
+  roles:
+    # -common
+    - kb_apply
+    # - reboot
+  #environment: "{{  aeon.proxy_env }}"
+

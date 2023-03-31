@@ -1,0 +1,9 @@
+[ap-tokyo-1]
+[ap-osaka-1]
+
+## Aggregate
+[AEON:children]
+ap-tokyo-1
+
+[all:vars]
+stage=staging
