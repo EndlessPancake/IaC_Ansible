@@ -1,0 +1,11 @@
+---
+- hosts: AEON
+  tasks:
+  - name: KB Installed?
+    script: ./files/ispatched.ps1 {{ aeon.kbname }}
+    register: st_kb
+    changed_when: False
+    
+  - name: KB Install
+    script: ./files/gopatch.ps1 {{ aeon.kbname }}
+    when: st_kb.stdout == "Not Installed." 
