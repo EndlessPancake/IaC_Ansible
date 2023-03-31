@@ -8,3 +8,15 @@ Function Check_KB_Installed {
 }
 Get-HotFix -Id $args[0]
 }
+
+Function main {
+  Check_KB_Installed
+  if ( $? ) {
+    # true
+    Write-Host "Installed."
+  }
+  else {
+    Write-Host "Not Installed."
+  }
+}
+main
