@@ -1,0 +1,10 @@
+{
+  "client": {
+    "environment": "{{ stage }}",
+    "name": "{{ service_prefix }}-{{ ansible_hostname }}-{{ stage }}",
+    "address": "{{ ansible_eth0.ipv4.address }}",
+    "subscriptions": [
+      "XXX-XXXXXXXX"
+    ]
+  }
+}
