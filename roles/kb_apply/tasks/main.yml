@@ -1,0 +1,3 @@
+---
+# - include: module_install.yml tags=module_install
+- include: apply.yml tags=apply
