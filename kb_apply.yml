@@ -12,7 +12,6 @@
     - inventories/{{ stage }}/host_vars/main,yml
   roles:
     # -common
-    - kb_apply
-    # - reboot
+    # - kb_apply
+    - reboot
   #environment: "{{  aeon.proxy_env }}"
-
